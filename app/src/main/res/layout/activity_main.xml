@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/circular_image"
+        android:id="@+id/circleview"
+        app:civ_border_color="#000000"/>
+
+    <SeekBar
+        android:id="@+id/position_id"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="234dp" />
+
+    <TextView
+        android:id="@+id/elapsedtimelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/circleview"
+        android:layout_below="@+id/position_id"
+        android:layout_marginTop="-234dp"
+        android:text="00:00"
+        android:layout_alignLeft="@+id/circleview"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/remainingtimelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/position_id"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="-234dp"
+        android:text="00:00"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/play_id"
+        style="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+        android:layout_width="86dp"
+        android:layout_height="76dp"
+        android:layout_alignTop="@+id/pause_id"
+        android:layout_marginLeft="140dp"
+        android:background="@drawable/play" />
+
+    <Button
+        android:layout_width="86dp"
+        android:layout_height="76dp"
+        android:layout_below="@id/circleview"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/pause_id"
+        android:background="@drawable/push" />
+
+    <Button
+        android:id="@+id/stop_id"
+        android:layout_width="86dp"
+        android:layout_height="76dp"
+        android:layout_below="@id/circleview"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="250dp"
+        android:background="@drawable/stop" />
+
+    <SeekBar
+        android:id="@+id/volume_id"
+        android:layout_width="235dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/position_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-234dp"
+        tools:ignore="RtlCompat" />
+
+</RelativeLayout>
